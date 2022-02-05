@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/fileu" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="hidden" value="{{fname}}" name="username">
+        <input type="file" id="myfile1" name="myfile1" style="color: white;" >
+        <span id="error-mess" class="error-mess" ></span>
+        <button class="logout" type="submit" onclick="return checktype()">submit</button>
+    </form>    
+</body>
+</html>
